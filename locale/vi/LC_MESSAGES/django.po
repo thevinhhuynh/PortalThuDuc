@@ -627,9 +627,9 @@ msgid "Layer"
 msgid_plural "Layers"
 msgstr[0] "Lớp"
 
-#: contrib/geosites/templates/master_index.html:26 templates/index.html:31
-msgid "Click to search for geospatial data published by other users, organizations and public sources. Download data in standard formats."
-msgstr "Các lớp dữ liệu Việt Nam và thế giới được HCMGIS thu thập, biên tập, cập nhật và chia sẻ miễn phí. Người dùng có thể đóng góp thêm các nguồn dữ liệu để phục vụ cho cộng đồng"
+#: contrib/geosites/templates/master_index.html:26 templates/index.html:53
+msgid "Click to search for geospatial data published by other users, organizations in Thu Duc Geospatial Portal. Download data in standard formats."
+msgstr "Xem, tìm kiếm và tải về các lớp dữ liệu được chia sẻ bởi các phòng ban và các phường trong hệ thống Thu Duc Geospatial Portal."
 
 #: contrib/geosites/templates/master_index.html:28 templates/index.html:33
 msgid "Add layers"
@@ -646,8 +646,8 @@ msgid_plural "Maps"
 msgstr[0] "Bản đồ"
 
 #: contrib/geosites/templates/master_index.html:36 templates/index.html:41
-msgid "Data is available for browsing, aggregating and styling to generate maps which can be shared publicly or restricted to specific users only."
-msgstr "Tìm kiếm, tập hợp và biên tập thể hiện các lớp dữ liệu hiện có để tạo và chia sẻ các bản đồ."
+msgid "Data is available for browsing, aggregating and styling to generate and share maps in Thu Duc Geospatial Portal."
+msgstr "Tìm kiếm, tập hợp, biên tập hiển thị các lớp dữ liệu để tạo và chia sẻ các bản đồ."
 
 #: contrib/geosites/templates/master_index.html:38 templates/index.html:43
 msgid "Create maps"
@@ -664,8 +664,8 @@ msgid_plural "Users"
 msgstr[0] "Người dùng"
 
 #: contrib/geosites/templates/master_index.html:46 templates/index.html:92
-msgid "Thu Duc Portal allows registered users (default user/password: guest/guest) to easily upload documents and geospatial data in several formats (Shapefile, GeoTiff,...)"
-msgstr "Người dùng đã đăng kí (tài khoản mặc định: guest/ guest) có thể dễ dàng tải lên các tài liệu và dữ liệu không gian ở định dạng vector hoặc raster (Shapefile, GeoTiff,...)"
+msgid "User list in Thu Duc Geospatial Portal"
+msgstr "Danh sách người dùng trong hệ thống Thu Duc Geospatial Portal."
 
 #: contrib/geosites/templates/master_index.html:47 templates/index.html:52
 msgid "See users"
@@ -4112,8 +4112,8 @@ msgid "&copy; 2021"
 msgstr "Bản quyền 2021"
 
 #: templates/index.html:34
-msgid "Free and Open GeoData Sharing Platform"
-msgstr "Nền tảng chia sẻ dữ liệu mở"
+msgid "Geospatial Data Sharing Platform for Thu Duc City"
+msgstr "Cổng thông tin dữ liệu không gian Thành phố Thủ Đức."
 
 #: templates/base.html:67
 msgid "TUTORIAL"
@@ -4140,8 +4140,8 @@ msgid "Filters"
 msgstr "Bộ lọc"
 
 #: templates/index.html:92
-msgid "Documents from basic to advanced in GIS, Remote Sensing and Computer Science (books, scientific papers,...) are collected from the Internet and contributed by the the users community"
-msgstr "Các tài liệu từ cơ bản đến nâng cao về GIS, viễn thám và khoa học máy tính (sách, bài báo khoa học,...) được sưu tầm, chọn lọc từ các nguồn trên mạng và được đóng góp bởi cộng đồng người dùng."
+msgid "Click to search and download documents published by other users, organizations in Thu Duc Geospatial Portal."
+msgstr "Xem, tìm kiếm và tải về các tài liệu được chia sẻ bởi các phòng ban và các phường trong hệ thống Thu Duc Geospatial Portal. "
 
 #~ msgid ""
 #~ "\n"
