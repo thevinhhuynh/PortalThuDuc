@@ -14,9 +14,9 @@
     .text-banner{
       position: absolute;
       z-index: 1000;
-      color: white;
-      left: 10%;
-      top: 62%;
+      color: #002E5B;
+      left: 13%;
+      top: 55%;
       font-size: 25px;
       font-weight: 800;
       text-shadow: 0 0 3px #ffffff, 0 0 5px #000000;
@@ -35,25 +35,12 @@
             </div>
              <ul class="slides">
                <li class="flex-active-slide" style="width: 100%; float: left; margin-right: -100%; position: relative; display: list-item;">
-                  <img src="{{ STATIC_URL }}trangchu/img/banner_HCMGIS_Opendata_slogan.jpg" alt="">
+                  <img src="{{ STATIC_URL }}trangchu/img/banner_ThuDuc.jpg" alt="">
                </li>
              </ul>
          <ol class="flex-control-nav flex-control-paging"><li><a class="flex-active">1</a></li><li><a class="">2</a></li></ol><ul class="flex-direction-nav"><li><a class="flex-prev" href="https://webthemez.com/demo/acura-business-bootstrap-website-template/#">Previous</a></li><li><a class="flex-next" href="https://webthemez.com/demo/acura-business-bootstrap-website-template/#">Next</a></li></ul></div>
    <!-- end slider -->
    </section> 
-   <!--
-   <section id="call-to-action-2">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-10 col-sm-9">
-					<h3>HCMGIS OpenData</h3>
-					<p>{% blocktrans %}GeoNode is an open source platform for sharing geospatial data and maps.{% endblocktrans %}</p>
-          <p>{% blocktrans %}If you have any questions about the software or service, join our <a href="http://lists.osgeo.org/cgi-bin/mailman/listinfo/geonode-users">mailing list</a>.{% endblocktrans %}</p>
-				</div>
-			</div>
-		</div>
-	</section>
-  -->
   {% endblock %}
   {% block mainbody %}
   <div class="container">
@@ -89,7 +76,7 @@
       <div class="col-md-3">
         <p><a href="{% url "profile_browse" %}"><i class="fa fa-user fa-5x"></i></a></p>
         <h2><a href="{% url "profile_browse" %}">{{ facets.user|default:_("No") }} {% blocktrans count counter=facets.user %}User{% plural %}Users{% endblocktrans %}</a></h2>
-        <p>{% trans "HCMGIS OpenData allows registered users (default user/password: guest/guest) to easily upload documents and geospatial data in several formats (Shapefile, GeoTiff,...)" %}</p>
+        <p>{% trans "Thu Duc Portal allows registered users (default user/password: guest/guest) to easily upload documents and geospatial data in several formats (Shapefile, GeoTiff,...)" %}</p>
         <p><a class="btn btn-default" href="{% url "profile_browse" %}" role="button">{% trans "See users" %} &raquo;</a></p>
       </div>
     {% endwith %}
