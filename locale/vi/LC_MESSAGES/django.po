@@ -4095,6 +4095,10 @@ msgstr "Thành phố Thủ Đức"
 msgid "QUICK LINKS"
 msgstr "LIÊN KẾT NHANH"
 
+#: templates/base.html:178
+msgid "THU DUC CITY"
+msgstr "THÀNH PHỐ THỦ ĐỨC"
+
 #: templates/base.html:187
 msgid "CONTACT"
 msgstr "LIÊN HỆ"
