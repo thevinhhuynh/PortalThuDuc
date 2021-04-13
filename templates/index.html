@@ -1,0 +1,168 @@
+{% extends "site_base.html" %}
+{% load i18n %}
+{% load staticfiles %}
+{% load base_tags %}
+
+{% block title %} {% trans "Welcome!" %} - {{ block.super }} {% endblock %}
+
+{% block body_class %}home{% endblock %}
+
+{% block middle %}
+   {{ block.super }}
+  {% block hero %}
+  <style>
+    .text-banner{
+      position: absolute;
+      z-index: 1000;
+      color: white;
+      left: 10%;
+      top: 62%;
+      font-size: 25px;
+      font-weight: 800;
+      text-shadow: 0 0 3px #ffffff, 0 0 5px #000000;
+    }
+    @media(max-width: 768px) {
+      .text-banner{
+        font-size: 16px;
+      }
+    }
+  </style>
+  <section style="margin-top: -30px;" id="banner">
+   <!-- Slider -->
+         <div id="main-slider" class="flexslider">
+            <div class='text-banner'>
+                <p>{% trans "Free and Open GeoData Sharing Platform" %}</p>
+            </div>
+             <ul class="slides">
+               <li class="flex-active-slide" style="width: 100%; float: left; margin-right: -100%; position: relative; display: list-item;">
+                  <img src="{{ STATIC_URL }}trangchu/img/banner_HCMGIS_Opendata_slogan.jpg" alt="">
+               </li>
+             </ul>
+         <ol class="flex-control-nav flex-control-paging"><li><a class="flex-active">1</a></li><li><a class="">2</a></li></ol><ul class="flex-direction-nav"><li><a class="flex-prev" href="https://webthemez.com/demo/acura-business-bootstrap-website-template/#">Previous</a></li><li><a class="flex-next" href="https://webthemez.com/demo/acura-business-bootstrap-website-template/#">Next</a></li></ul></div>
+   <!-- end slider -->
+   </section> 
+   <!--
+   <section id="call-to-action-2">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-10 col-sm-9">
+					<h3>HCMGIS OpenData</h3>
+					<p>{% blocktrans %}GeoNode is an open source platform for sharing geospatial data and maps.{% endblocktrans %}</p>
+          <p>{% blocktrans %}If you have any questions about the software or service, join our <a href="http://lists.osgeo.org/cgi-bin/mailman/listinfo/geonode-users">mailing list</a>.{% endblocktrans %}</p>
+				</div>
+			</div>
+		</div>
+	</section>
+  -->
+  {% endblock %}
+  {% block mainbody %}
+  <div class="container">
+    <div class="row home-facets">
+    {% with facet_type='home' %}
+     {% facets as facets %}
+      <div class="col-md-3">
+        <p><a href="{% url "layer_browse" %}"><i class="fa fa-square-o fa-5x rotate-45"></i></a></p>
+        <h2><a href="{% url "layer_browse" %}">{{ facets.layer|default:_("No") }} {% blocktrans count counter=facets.layer %}Layer{% plural %}Layers{% endblocktrans %}</a></h2>
+        <p>{% trans "Click to search for geospatial data published by other users, organizations and public sources. Download data in standard formats." %}</p> 
+        {% if user.is_authenticated %}
+        <p class="text-center"><a class="btn btn-default" href="{% url "layer_upload" %}" role="button">{% trans "Add layers" %} &raquo;</a></p>
+        {% else %}
+        <p class="text-center"><a class="btn btn-default" href="{% url "layer_browse" %}" role="button">{% trans "Explore layers" %} &raquo;</a></p>        
+        {% endif %}
+      </div>
+      <div class="col-md-3">
+        <p><a href="{% url "maps_browse" %}"><i class="fa fa-map-marker fa-5x"></i></a></p>
+        <h2><a href="{% url "maps_browse" %}">{{ facets.map|default:_("No") }} {% blocktrans count counter=facets.map %}Map{% plural %}Maps{% endblocktrans %}</a></h2>
+        <p>{% trans "Data is available for browsing, aggregating and styling to generate maps which can be shared publicly or restricted to specific users only." %}</p>
+        {% if user.is_authenticated %}
+        <p><a class="btn btn-default" href="{% url "new_map" %}" role="button">{% trans "Create maps" %} &raquo;</a></p>
+        {% else %}
+        <p><a class="btn btn-default" href="{% url "maps_browse" %}" role="button">{% trans "Explore maps" %} &raquo;</a></p>
+        {% endif %}
+      </div>
+      <div class="col-md-3">
+        <p><a href="{% url "document_browse" %}"><i class="fa fa-newspaper-o fa-5x"></i></a></p>
+        <h2><a href="{% url "document_browse" %}">{{ facets.document|default:_("No") }} {% blocktrans count counter=facets.document %}Documents{% plural %}Documents{% endblocktrans %}</a></h2>
+        <p>{% trans "Documents from basic to advanced in GIS, Remote Sensing and Computer Science (books, scientific papers,...) are collected from the Internet and contributed by the the users community" %}</p>
+        <p><a class="btn btn-default" href="{% url "document_browse" %}" role="button">{% trans "Documents" %} &raquo;</a></p>
+      </div>
+      <div class="col-md-3">
+        <p><a href="{% url "profile_browse" %}"><i class="fa fa-user fa-5x"></i></a></p>
+        <h2><a href="{% url "profile_browse" %}">{{ facets.user|default:_("No") }} {% blocktrans count counter=facets.user %}User{% plural %}Users{% endblocktrans %}</a></h2>
+        <p>{% trans "HCMGIS OpenData allows registered users (default user/password: guest/guest) to easily upload documents and geospatial data in several formats (Shapefile, GeoTiff,...)" %}</p>
+        <p><a class="btn btn-default" href="{% url "profile_browse" %}" role="button">{% trans "See users" %} &raquo;</a></p>
+      </div>
+    {% endwith %}
+    </div>
+  </div>
+<!--
+  <section class="section-padding gray-bg">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="section-title text-center">
+						<h2>Our Organization</h2>
+						<p>Curabitur aliquet quam id dui posuere blandit. Donec sollicitudin molestie malesuada Pellentesque <br>ipsum id orci porta dapibus. Vivamus suscipit tortor eget felis porttitor volutpat.</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6 col-sm-6">
+					<div class="about-text">
+						<p>Grids is a responsive Multipurpose Template. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet quam id dui posuere blandit. Donec sollicitudin molestie malesuada. Pellentesque in ipsum id orci porta dapibus. Vivamus suscipit tortor eget felis porttitor volutpat.</p>
+
+						<ul class="withArrow">
+							<li><span class="fa fa-angle-right"></span> Lorem ipsum dolor sit amet</li>
+							<li><span class="fa fa-angle-right"></span> consectetur adipiscing elit</li>
+							<li><span class="fa fa-angle-right"></span> Curabitur aliquet quam id dui</li>
+							<li><span class="fa fa-angle-right"></span> Donec sollicitudin molestie malesuada.</li>
+						</ul>
+						<a href="https://webthemez.com/demo/acura-business-bootstrap-website-template/#" class="btn btn-primary">Learn More</a>
+					</div>
+				</div>
+				<div class="col-md-6 col-sm-6">
+					<div class="about-image">
+						<img src="./Acura Multi purpose Free HTML5 Template.htmla_files/about.png" alt="About Images">
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>	
+  -->
+  {% verbatim %}
+  <div ng-app="featured">
+    <div ng-repeat="item in featured">
+      <!--{{ item.title }}-->
+    </div>
+  </div>
+  {% endverbatim %}
+  {% endblock %}
+  
+{% endblock %}
+
+{% block extra_script %}
+{% if DEBUG_STATIC %}
+<script src="{{ STATIC_URL }}lib/js/angular.js"></script>
+{% endif %}
+  <script type="text/javascript">
+    FEATURED_URL = '{% url 'api_dispatch_list' api_name='api' resource_name='featured' %}'
+    'use strict';
+    (function(){  
+      var module = angular.module('featured', []);
+      module.run(function($http, $rootScope){
+        $http.get(FEATURED_URL).success(function(data){
+          $rootScope.featured = data.objects;
+        });
+      });
+    })(); 
+  </script>
+  <!--
+  <script type="text/javascript">
+    if (window.location.protocol == "http:") {
+        var restOfUrl = window.location.href.substr(5);
+        window.location = "https:" + restOfUrl;
+    }
+  </script>
+  -->
+
+{% endblock extra_script %}
