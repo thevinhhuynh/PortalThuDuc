@@ -114,9 +114,9 @@
                   <li id="nav_groups">
                     <a href="{% url "group_list" %}">{% trans "Groups" %}</a>
                   </li>
-                  <li id="nav_contacts">
+                  <!-- <li id="nav_contacts">
                     <a href="https://hcmgis.vn/contact-us/" target="_blank">{% trans "CONTACT" %}</a>
-                  </li>
+                  </li> -->
                   {% endblock %}
                   {% if not user.is_authenticated and REGISTRATION_OPEN %}
                   <li><a href="{% url "account_signup" %}">{% trans "Register" %}</a></li>
@@ -124,7 +124,7 @@
                   {% if user.is_authenticated %}
                   <li>
                     <a href="#" data-toggle="modal" data-target="#UserModal" role="button" aria-expanded="false">
-                      {% avatar user 30 %} {{ user.username }}
+                      {% avatar user 30 %} <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis; width: 50px; margin-top: -30px; margin-left: 40px;">{{ user.username }}</p>
                     </a>
                   </li>
                   {% else %}
