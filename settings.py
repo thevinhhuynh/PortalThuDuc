@@ -627,6 +627,25 @@ MAP_BASELAYERS = [
     "source": {"ptype": "gxp_olsource"},
     "type":"OpenLayers.Layer.WMS",
     "group":"background",
+    "visibility": True,
+    "fixed": True,
+    "args":[
+      "Sentinel-2 cloudless",
+      "https://maps.geo-solutions.it/geoserver/wms",
+      {
+        "layers": "s2cloudless:s2cloudless",
+        "format":"image/png8",
+        "tiled": True,
+        "tilesOrigin": [10.8007651,106.6924133], 
+        "maxZoom": 13
+      },
+      {"buffer": 0}
+    ]
+
+},{
+    "source": {"ptype": "gxp_olsource"},
+    "type":"OpenLayers.Layer.WMS",
+    "group":"background",
     "visibility": False,
     "fixed": True,
     "args":[
@@ -646,7 +665,7 @@ MAP_BASELAYERS = [
     "source": {"ptype": "gxp_googlesource", "apiKey": apiKey.GOOGLE_API_KEY},
     "group":"background",
     "name":"SATELLITE",
-    "visibility": True,
+    "visibility": False,
     "fixed": True
 }]
 
