@@ -40,7 +40,7 @@ PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
 
 ALLOWED_HOSTS = ['localhost', 'thuduc-portal.hcmgis.vn', 'localhost:8000', '127.0.0.1']
 
-DEBUG = TEMPLATE_DEBUG = False
+DEBUG = TEMPLATE_DEBUG = True
 
 # Set to True to load non-minified versions of (static) client dependencies
 # Requires to set-up Node and tools that are required for static development
@@ -613,22 +613,14 @@ DEFAULT_MAP_CENTER = (0, 0)
 # maximum zoom is between 12 and 15 (for Google Maps, coverage varies by area)
 DEFAULT_MAP_ZOOM = 0
 
-MAP_BASELAYERS = [{
+MAP_BASELAYERS = [
+{
     "source": {"ptype": "gxp_olsource"},
     "type": "OpenLayers.Layer",
     "args": ["No background"],
-    "visibility": True,
-    "fixed": True,
-    "group":"background"
-}, {
-    "source": {"ptype": "gxp_osmsource"},
-    "type": "OpenLayers.Layer.OSM",
-    "name": "mapnik",
     "visibility": False,
     "fixed": True,
-    "group": "background"
-},{
-    "source": {"ptype": "gxp_mapboxsource"},
+    "group":"background"
 },{
     "source": {"ptype": "gxp_olsource"},
     "type":"OpenLayers.Layer.WMS",
@@ -648,6 +640,12 @@ MAP_BASELAYERS = [{
       {"buffer": 0}
     ]
 
+}, {
+    "source": {"ptype": "gxp_googlesource", "apiKey": "AIzaSyAGFYMKcLL4yITVFMkzlcST1pxsrcu2B6E"},
+    "group":"background",
+    "name":"SATELLITE",
+    "visibility": True,
+    "fixed": True
 }]
 
 SOCIAL_BUTTONS = True
