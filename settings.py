@@ -613,6 +613,8 @@ DEFAULT_MAP_CENTER = (0, 0)
 # maximum zoom is between 12 and 15 (for Google Maps, coverage varies by area)
 DEFAULT_MAP_ZOOM = 0
 
+import conts_apikey_google as apiKey
+
 MAP_BASELAYERS = [
 {
     "source": {"ptype": "gxp_olsource"},
@@ -641,7 +643,7 @@ MAP_BASELAYERS = [
     ]
 
 }, {
-    "source": {"ptype": "gxp_googlesource", "apiKey": "AIzaSyAGFYMKcLL4yITVFMkzlcST1pxsrcu2B6E"},
+    "source": {"ptype": "gxp_googlesource", "apiKey": apiKey.GOOGLE_API_KEY},
     "group":"background",
     "name":"SATELLITE",
     "visibility": True,
