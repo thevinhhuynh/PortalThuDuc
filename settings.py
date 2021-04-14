@@ -620,7 +620,7 @@ MAP_BASELAYERS = [
     "source": {"ptype": "gxp_olsource"},
     "type": "OpenLayers.Layer",
     "args": ["No background"],
-    "visibility": True,
+    "visibility": False,
     "fixed": True,
     "group":"background"
 },{
@@ -646,7 +646,7 @@ MAP_BASELAYERS = [
     "source": {"ptype": "gxp_googlesource", "apiKey": apiKey.GOOGLE_API_KEY},
     "group":"background",
     "name":"SATELLITE",
-    "visibility": False,
+    "visibility": True,
     "fixed": True
 }]
 
