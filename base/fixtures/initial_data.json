@@ -34,7 +34,7 @@
           "model": "base.topiccategory", 
           "fields": {
               "description": "economic activities, conditions and employment. Examples: production, labour, revenue, commerce, industry, tourism and ecotourism, forestry, fisheries, commercial or subsistence hunting, exploration and exploitation of resources such as minerals, oil and gas", 
-              "gn_description": "Kinh tế, văn hóa và xã hội", 
+              "gn_description": "Kinh tế - Văn hóa - Xã hội", 
               "is_choice": true, 
               "identifier": "economy"
           }
@@ -70,16 +70,6 @@
           }
       }, 
       {
-          "pk": 1, 
-          "model": "base.topiccategory", 
-          "fields": {
-              "description": "information pertaining to earth sciences. Examples: geophysical features and processes, geology, minerals, sciences dealing with the composition, structure and origin of the earth s rocks, risks of earthquakes, volcanic activity, landslides, gravity information, soils, permafrost, hydrogeology, erosion", 
-              "gn_description": "Geoscientific Information", 
-              "is_choice": true, 
-              "identifier": "geoscientificInformation"
-          }
-      }, 
-      {
           "pk": 14, 
           "model": "base.topiccategory", 
           "fields": {
@@ -108,37 +98,7 @@
               "is_choice": true, 
               "identifier": "inlandWaters"
           }
-      }, 
-      {
-          "pk": 8, 
-          "model": "base.topiccategory", 
-          "fields": {
-              "description": "military bases, structures, activities. Examples: barracks, training grounds, military transportation, information collection", 
-              "gn_description": "Intelligence Military", 
-              "is_choice": true, 
-              "identifier": "intelligenceMilitary"
-          }
-      }, 
-      {
-          "pk": 5, 
-          "model": "base.topiccategory", 
-          "fields": {
-              "description": "features and characteristics of salt water bodies (excluding inland waters). Examples: tides, tidal waves, coastal information, reefs", 
-              "gn_description": "Oceans", 
-              "is_choice": true, 
-              "identifier": "oceans"
-          }
-      }, 
-      {
-          "pk": 10, 
-          "model": "base.topiccategory", 
-          "fields": {
-              "description": "positional information and services. Examples: addresses, geodetic networks, control points, postal zones and services, place names", 
-              "gn_description": "Location", 
-              "is_choice": true, 
-              "identifier": "location"
-          }
-      }, 
+      },  
       {
           "pk": 12, 
           "model": "base.topiccategory", 
@@ -243,8 +203,8 @@
           "pk": 25, 
           "model": "base.topiccategory", 
           "fields": {
-              "description": "Quy hoạch - kiến trúc", 
-              "gn_description": "Quy hoạch - kiến trúc", 
+              "description": "Quy hoạch - Kiến trúc", 
+              "gn_description": "Quy hoạch - Kiến trúc", 
               "is_choice": true, 
               "identifier": "architecturalplanning"
           }
@@ -253,8 +213,8 @@
           "pk": 26, 
           "model": "base.topiccategory", 
           "fields": {
-              "description": "Nông nghiệp - phát triển nông thôn", 
-              "gn_description": "Nông nghiệp - phát triển nông thôn", 
+              "description": "Nông nghiệp - Phát triển nông thôn", 
+              "gn_description": "Nông nghiệp - Phát triển nông thôn", 
               "is_choice": true, 
               "identifier": "agriculture"
           }
